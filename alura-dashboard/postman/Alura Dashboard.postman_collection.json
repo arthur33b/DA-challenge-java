@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Alura Dashboard",
+    "description": "Postman collection for Alura Dashboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cursos",
+      "item": [
+        {
+          "name": "Get All Cursos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursos",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cursos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Cursos by Categoria",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursos/categoria/{{categoriaId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cursos", "categoria", "{{categoriaId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Cursos Populares",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursos/populares",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cursos", "populares"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Estatisticas",
+      "item": [
+        {
+          "name": "Get Estatisticas por Categoria",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estatisticas/por-categoria",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "estatisticas", "por-categoria"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Top 5 Cursos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estatisticas/top5",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "estatisticas", "top5"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Media de Avaliacoes por Area",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estatisticas/avaliacoes",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "estatisticas", "avaliacoes"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+com\alura\dashboard\config\SwaggerConfig.class
+com\alura\dashboard\repository\CursoRepository.class
+com\alura\dashboard\model\Instrutor.class
+com\alura\dashboard\DashboardApplication.class
+com\alura\dashboard\repository\GenericRepository.class
+com\alura\dashboard\controller\RootController.class
+com\alura\dashboard\model\Curso.class
+com\alura\dashboard\model\Categoria.class
+com\alura\dashboard\controller\CursoController.class
+com\alura\dashboard\config\DataSourceConfig.class
+com\alura\dashboard\controller\EstatisticaController.class
+com\alura\dashboard\service\CursoService.class
+com\alura\dashboard\service\EstatisticaService.class
+com\alura\dashboard\dto\TopCursoDTO.class
+com\alura\dashboard\repository\CategoriaRepository.class
+com\alura\dashboard\dto\EstatisticaPorCategoriaDTO.class
+com\alura\dashboard\dto\CursoDTO.class

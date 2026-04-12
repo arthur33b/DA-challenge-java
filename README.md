@@ -55,11 +55,12 @@ Alura Dashboard
    - **H2 Console:** http://localhost:8080/h2-console
 
 ### Configuração do Banco de Dados
-- **Padrão:** H2 Database (em memória)
-- **JDBC URL:** `jdbc:h2:mem:testdb`
-- **Usuário:** `sa`
-- **Senha:** `password`
+- **Banco Ativo:** Oracle Database
+- **JDBC URL:** `jdbc:oracle:thin:@//localhost:1521/XE`
+- **Usuário:** `rm560820`
+- **Senha:** `Fiap25`
 - **Dados iniciais:** Carregados automaticamente via `schema.sql` e `data.sql`
+- **Nota:** Para usar H2 em memória para desenvolvimento local, descomente as linhas de H2 em `application.properties` e comente as de Oracle
 
 ### Funcionalidades Implementadas
 - ✅ **Gestão de Cursos** - CRUD completo (apenas leitura implementada)
@@ -105,14 +106,20 @@ mvn clean package -Pproduction
 java -jar -Dspring.profiles.active=production target/dashboard-1.0.0.jar
 ```
 
-### Configuração Oracle (Produção)
-Para usar Oracle ao invés de H2, descomente as linhas em `application.properties`:
+### Configuração Alternativa - H2 (Desenvolvimento Local)
+Para usar H2 em memória em vez de Oracle, comente as linhas de Oracle em `application.properties` e descomente as de H2:
 ```properties
-# spring.datasource.url=jdbc:oracle:thin:@//localhost:1521/xe
+# Oracle configuration (commented out)
+# spring.datasource.url=jdbc:oracle:thin:@//localhost:1521/XE
 # spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-# spring.datasource.username=seu_usuario
-# spring.datasource.password=sua_senha
-# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle12cDialect
+# spring.datasource.username=rm560820
+# spring.datasource.password=Fiap25
+
+# H2 configuration (uncomment to use)
+spring.datasource.url=jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
 ```
 
 ## 🏗️ Arquitetura e Tecnologias

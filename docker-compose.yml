@@ -1,0 +1,17 @@
+version: "3.8"   # Versão do Compose
+
+services:        # Onde definimos os containers
+  alura-dashboard:              # Nome do serviço (container)
+    container_name: alura-dashboard   # Nome visível no Docker
+    build: .                     # Constrói a imagem com base no Dockerfile atual
+    ports:
+      - "8080:8080"              # Mapeia porta 8080 da VM -> 8080 do container
+    restart: always              # Reinicia automaticamente se cair
+    networks:
+      - alura-network            # Rede interna isolada (boa prática)
+    user: "1000:1000"            # Executa como usuário não-root (segurança)
+
+# Definição da rede usada pelo container
+networks:
+  alura-network:
+    driver: bridge

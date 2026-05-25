@@ -8,7 +8,7 @@
 | 02/10/2023 | Definição dos requisitos e funcionalidades      | Todos               |
 | 03/10/2023 | Criação do modelo de domínio                    | João                 |
 | 04/10/2023 | Implementação das entidades JPA                 | Maria               |
-| 05/10/2023 | Configuração do banco de dados (H2 e Oracle)   | Carlos              |
+| 05/10/2023 | Configuração do banco de dados (Oracle)   | Carlos              |
 | 06/10/2023 | Desenvolvimento da camada de repositório       | Ana                 |
 | 07/10/2023 | Desenvolvimento da camada de serviço            | João                 |
 | 08/10/2023 | Implementação dos controladores REST            | Maria               |
